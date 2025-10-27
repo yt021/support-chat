@@ -1,0 +1,47 @@
+[
+  {
+    "keywords": ["hello", "hi", "hey"],
+    "response": "Hello! I'm your support assistant. How can I help you today?"
+  },
+  {
+    "keywords": ["warranty", "guarantee"],
+    "response": "All our products come with a 1-year manufacturer warranty. For warranty claims, please contact support with your order number."
+  },
+  {
+    "keywords": ["shipping", "delivery", "how long"],
+    "response": "Our standard shipping takes 3-5 business days. Express shipping (1-2 days) is available for an additional fee of $15."
+  },
+  {
+    "keywords": ["return", "refund", "exchange"],
+    "response": "We have a 30-day return policy. Items must be in original condition with tags attached. Refunds are processed within 5-7 business days after we receive the returned item."
+  },
+  {
+    "keywords": ["account", "profile", "settings"],
+    "response": "You can manage your account by clicking on your profile icon in the top right corner. From there you can update your information, view orders, and change preferences."
+  },
+  {
+    "keywords": ["contact", "email", "phone", "support"],
+    "response": "You can reach us at support@company.com or call us at 1-800-SUPPORT (Mon-Fri, 9am-5pm EST). We typically respond within 24 hours."
+  },
+  {
+    "keywords": ["order", "track", "status"],
+    "response": "To track your order, please visit your account page or check the confirmation email we sent. If you need help, let me know your order number!"
+  },
+  {
+    "keywords": ["password", "login", "sign in"],
+    "response": "If you're having trouble signing in, click the 'Forgot Password' link on the login page. We'll send you a reset link to your email."
+  },
+  {
+    "keywords": ["payment", "card", "checkout"],
+    "response": "We accept all major credit cards, PayPal, and Apple Pay. All transactions are secured with 256-bit SSL encryption."
+  },
+  {
+    "keywords": ["product", "item", "available"],
+    "response": "You can browse all our products on the main page. Use the search bar or filters to find what you're looking for!"
+  },
+  {
+    "keywords": ["thank", "thanks"],
+    "response": "You're very welcome! Is there anything else I can help you with today?"
+  }
+]
+

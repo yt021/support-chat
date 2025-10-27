@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .chat-bubble {
+    @apply rounded-2xl px-4 py-2 max-w-[80%] break-words;
+  }
+  
+  .chat-bubble-user {
+    @apply bg-primary-600 text-white ml-auto;
+  }
+  
+  .chat-bubble-assistant {
+    @apply bg-white text-gray-900 border border-gray-200;
+  }
+}
+
