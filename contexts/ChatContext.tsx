@@ -27,7 +27,7 @@ const getInitialMessages = (): Message[] => {
     return [{
       id: '1',
       role: 'assistant' as const,
-      content: 'Hello! I\'m your support assistant. How can I help you today?',
+      content: 'سلام! من دستیار پشتیبانی شما هستم. چطور می‌تونم کمکتون کنم؟',
       timestamp: new Date(),
     }]
   }
@@ -50,7 +50,7 @@ const getInitialMessages = (): Message[] => {
   return [{
     id: '1',
     role: 'assistant' as const,
-    content: 'Hello! I\'m your support assistant. How can I help you today?',
+    content: 'سلام! من دستیار پشتیبانی شما هستم. چطور می‌تونم کمکتون کنم؟',
     timestamp: new Date(),
   }]
 }
@@ -83,7 +83,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     const defaultMessage: Message = {
       id: Date.now().toString(),
       role: 'assistant',
-      content: 'Hello! I\'m your support assistant. How can I help you today?',
+      content: 'سلام! من دستیار پشتیبانی شما هستم. چطور می‌تونم کمکتون کنم؟',
       timestamp: new Date(),
     }
     setMessages([defaultMessage])

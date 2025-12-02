@@ -15,7 +15,7 @@ export function ChatContainer() {
   const bottomRef = useScrollToBottom([messages])
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="chat-shell text-[var(--text)] h-full min-h-0">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-4 py-3">
         <div className="max-w-3xl mx-auto flex justify-between items-center">
@@ -34,7 +34,7 @@ export function ChatContainer() {
       </header>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-4 py-6">
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-6">
         <div className="max-w-3xl mx-auto">
           {messages.map((message) => (
             <ChatMessage key={message.id} message={message} />

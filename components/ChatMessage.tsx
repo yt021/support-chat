@@ -13,16 +13,17 @@ export function ChatMessage({ message }: ChatMessageProps) {
 
   return (
     <div
+      dir="ltr"
       className={`flex gap-3 mb-4 ${
         isUser ? 'flex-row-reverse' : 'flex-row'
       }`}
     >
       {/* Avatar */}
       <div
-        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+        className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center border ${
           isUser
-            ? 'bg-primary-600 text-white'
-            : 'bg-gray-200 text-gray-600'
+            ? 'bg-gradient-to-br from-[var(--accent)] to-[var(--accent-strong)] text-[#fdfefe] border-transparent shadow-[var(--shadow-accent)]'
+            : 'bg-[var(--surface-soft)] text-[var(--accent-blue)] border-[var(--border-soft)] shadow-sm'
         }`}
       >
         {isUser ? (
@@ -35,13 +36,14 @@ export function ChatMessage({ message }: ChatMessageProps) {
       {/* Message Bubble */}
       <div className={`flex flex-col ${isUser ? 'items-end' : 'items-start'}`}>
         <div
+          dir="rtl"
           className={`chat-bubble ${
             isUser ? 'chat-bubble-user' : 'chat-bubble-assistant'
           }`}
         >
           {message.content}
         </div>
-        <span className="text-xs text-gray-500 mt-1">
+        <span className="text-xs text-[var(--muted)] mt-1" dir="ltr">
           {message.timestamp.toLocaleTimeString([], {
             hour: '2-digit',
             minute: '2-digit',

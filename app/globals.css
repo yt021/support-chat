@@ -2,23 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f5f2e6;
+  --card: #fdfcff;
+  --surface-soft: #eef1f8;
+  --text: #1c1f2b;
+  --muted: #5a6275;
+  --accent: #c07a1a;
+  --accent-strong: #cc5c1a;
+  --accent-blue: #3257a4;
+  --accent-teal: #2d8d7d;
+  --border-soft: rgba(28, 31, 43, 0.1);
+  --border-strong: rgba(28, 31, 43, 0.18);
+  --border-hover: rgba(28, 31, 43, 0.32);
+  --shadow-soft: 0 14px 40px rgba(28, 31, 43, 0.08);
+  --shadow-card: 0 22px 60px rgba(28, 31, 43, 0.12);
+  --shadow-accent: 0 12px 32px rgba(192, 122, 26, 0.25);
+}
+
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    font-family: 'Shabnam', 'Vazirmatn', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(192, 122, 26, 0.08), transparent 35%),
+      radial-gradient(circle at 85% 10%, rgba(50, 87, 164, 0.08), transparent 32%),
+      radial-gradient(circle at 25% 80%, rgba(45, 141, 125, 0.08), transparent 30%),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    color: var(--text);
+    min-height: 100vh;
+    direction: rtl;
   }
 }
 
 @layer components {
+  .chat-window {
+    width: min(420px, 100%);
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-card);
+    background: var(--card);
+  }
+
+  @media (max-width: 480px) {
+    .chat-window {
+      height: 75vh;
+    }
+  }
+
+  .chat-shell {
+    @apply flex flex-col h-full w-full relative;
+    isolation: isolate;
+    background: color-mix(in srgb, var(--bg) 92%, white 8%);
+  }
+
+  .chat-shell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 30% 30%, rgba(192, 122, 26, 0.08), transparent 40%),
+      radial-gradient(circle at 70% 20%, rgba(50, 87, 164, 0.08), transparent 36%),
+      radial-gradient(circle at 60% 75%, rgba(45, 141, 125, 0.08), transparent 38%);
+    z-index: 0;
+  }
+
+  .chat-surface {
+    background: var(--card);
+    border-color: var(--border-soft);
+    box-shadow: var(--shadow-card);
+  }
+
   .chat-bubble {
-    @apply rounded-2xl px-4 py-2 max-w-[80%] break-words;
+    @apply rounded-2xl px-4 py-3 max-w-[92%] break-words leading-relaxed text-right;
   }
-  
+
   .chat-bubble-user {
-    @apply bg-primary-600 text-white ml-auto;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #fdfefe;
+    border: 1px solid color-mix(in srgb, var(--accent) 55%, black 8%);
+    box-shadow: var(--shadow-accent);
+    @apply ml-auto;
   }
-  
+
   .chat-bubble-assistant {
-    @apply bg-white text-gray-900 border border-gray-200;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-soft);
   }
 }
 

@@ -24,9 +24,6 @@ export function ChatInput({ onSendMessage, isLoading }: ChatInputProps) {
     if (input.trim() && !isLoading) {
       onSendMessage(input)
       setInput('')
-      if (textareaRef.current) {
-        textareaRef.current.style.height = 'auto'
-      }
     }
   }
 
@@ -64,4 +61,3 @@ export function ChatInput({ onSendMessage, isLoading }: ChatInputProps) {
     </form>
   )
 }
-
