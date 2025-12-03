@@ -21,23 +21,22 @@ interface ChatContextType {
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined)
 
+const defaultAssistantMessage: Message = {
+  id: '1',
+  role: 'assistant',
+  content: 'سلام! من دستیار پشتیبانی هستم. هر سؤالی درباره سفارش، ارسال یا حساب دارید بپرسید.',
+  timestamp: new Date(),
+}
+
 const getInitialMessages = (): Message[] => {
   if (typeof window === 'undefined') {
-    // Server-side: return default message
-    return [{
-      id: '1',
-      role: 'assistant' as const,
-      content: 'سلام! من دستیار پشتیبانی شما هستم. چطور می‌تونم کمکتون کنم؟',
-      timestamp: new Date(),
-    }]
+    return [defaultAssistantMessage]
   }
 
-  // Client-side: try to load from localStorage
   const saved = localStorage.getItem('chat-messages')
   if (saved) {
     try {
       const messages = JSON.parse(saved)
-      // Convert timestamp strings back to Date objects
       return messages.map((msg: any) => ({
         ...msg,
         timestamp: new Date(msg.timestamp)
@@ -47,12 +46,7 @@ const getInitialMessages = (): Message[] => {
     }
   }
 
-  return [{
-    id: '1',
-    role: 'assistant' as const,
-    content: 'سلام! من دستیار پشتیبانی شما هستم. چطور می‌تونم کمکتون کنم؟',
-    timestamp: new Date(),
-  }]
+  return [defaultAssistantMessage]
 }
 
 export function ChatProvider({ children }: { children: ReactNode }) {
@@ -60,7 +54,6 @@ export function ChatProvider({ children }: { children: ReactNode }) {
   const [isTyping, setIsTyping] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  // Save to localStorage whenever messages change
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('chat-messages', JSON.stringify(messages))
@@ -71,36 +64,27 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     setMessages(prev => [...prev, message])
   }
 
-  const setTyping = (typing: boolean) => {
-    setIsTyping(typing)
-  }
-
-  const setLoading = (loading: boolean) => {
-    setIsLoading(loading)
-  }
-
   const clearMessages = () => {
-    const defaultMessage: Message = {
+    const newDefault: Message = {
+      ...defaultAssistantMessage,
       id: Date.now().toString(),
-      role: 'assistant',
-      content: 'سلام! من دستیار پشتیبانی شما هستم. چطور می‌تونم کمکتون کنم؟',
       timestamp: new Date(),
     }
-    setMessages([defaultMessage])
+    setMessages([newDefault])
     if (typeof window !== 'undefined') {
       localStorage.removeItem('chat-messages')
     }
   }
 
   return (
-    <ChatContext.Provider value={{ 
-      messages, 
-      isTyping, 
-      isLoading, 
-      addMessage, 
-      setTyping, 
-      setLoading, 
-      clearMessages 
+    <ChatContext.Provider value={{
+      messages,
+      isTyping,
+      isLoading,
+      addMessage,
+      setTyping: setIsTyping,
+      setLoading: setIsLoading,
+      clearMessages
     }}>
       {children}
     </ChatContext.Provider>

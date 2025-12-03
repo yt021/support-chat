@@ -1,47 +1,160 @@
 [
   {
-    "keywords": ["hello", "hi", "hey"],
-    "response": "Hello! I'm your support assistant. How can I help you today?"
+    "keywords": [
+      "hello",
+      "hi",
+      "hey",
+      "سلام"
+    ],
+    "response": "سلام! من دستیار پشتیبانی شما هستم. چطور می‌توانم کمکتان کنم؟"
   },
   {
-    "keywords": ["warranty", "guarantee"],
-    "response": "All our products come with a 1-year manufacturer warranty. For warranty claims, please contact support with your order number."
+    "keywords": [
+      "warranty",
+      "guarantee",
+      "گارانتی",
+      "ضمانت"
+    ],
+    "response": "تمام محصولات ما یک سال گارانتی سازنده دارند. برای پیگیری گارانتی لطفاً با پشتیبانی و شماره سفارش تماس بگیرید."
   },
   {
-    "keywords": ["shipping", "delivery", "how long"],
-    "response": "Our standard shipping takes 3-5 business days. Express shipping (1-2 days) is available for an additional fee of $15."
+    "keywords": [
+      "shipping",
+      "delivery",
+      "how long",
+      "ارسال",
+      "تحویل"
+    ],
+    "response": "ارسال عادی ۳ تا ۵ روز کاری زمان می‌برد. ارسال اکسپرس ۱ تا ۲ روزه با هزینه اضافی ۱۵ دلار (یا معادل) در دسترس است."
   },
   {
-    "keywords": ["return", "refund", "exchange"],
-    "response": "We have a 30-day return policy. Items must be in original condition with tags attached. Refunds are processed within 5-7 business days after we receive the returned item."
+    "keywords": [
+      "return",
+      "refund",
+      "exchange",
+      "مرجوعی",
+      "بازگشت"
+    ],
+    "response": "سیاست مرجوعی ما ۳۰ روزه است. کالا باید سالم و با برچسب باشد. بازپرداخت ۵ تا ۷ روز کاری پس از دریافت کالا انجام می‌شود."
   },
   {
-    "keywords": ["account", "profile", "settings"],
-    "response": "You can manage your account by clicking on your profile icon in the top right corner. From there you can update your information, view orders, and change preferences."
+    "keywords": [
+      "account",
+      "profile",
+      "settings",
+      "حساب",
+      "پروفایل"
+    ],
+    "response": "از بخش حساب کاربری می‌توانید اطلاعات، سفارش‌ها و تنظیمات را مدیریت کنید."
   },
   {
-    "keywords": ["contact", "email", "phone", "support"],
-    "response": "You can reach us at support@company.com or call us at 1-800-SUPPORT (Mon-Fri, 9am-5pm EST). We typically respond within 24 hours."
+    "keywords": [
+      "contact",
+      "email",
+      "phone",
+      "support",
+      "تماس",
+      "پشتیبانی"
+    ],
+    "response": "می‌توانید با ایمیل support@company.com یا شماره 1-800-SUPPORT (دوشنبه تا جمعه ۹ تا ۱۷) تماس بگیرید. معمولاً ظرف ۲۴ ساعت پاسخ می‌دهیم."
   },
   {
-    "keywords": ["order", "track", "status"],
-    "response": "To track your order, please visit your account page or check the confirmation email we sent. If you need help, let me know your order number!"
+    "keywords": [
+      "order",
+      "track",
+      "status",
+      "پیگیری",
+      "سفارش"
+    ],
+    "response": "برای پیگیری سفارش به حساب کاربری یا ایمیل تأیید مراجعه کنید. اگر کمک می‌خواهید، شماره سفارش را بفرستید."
   },
   {
-    "keywords": ["password", "login", "sign in"],
-    "response": "If you're having trouble signing in, click the 'Forgot Password' link on the login page. We'll send you a reset link to your email."
+    "keywords": [
+      "password",
+      "login",
+      "sign in",
+      "رمز",
+      "ورود"
+    ],
+    "response": "اگر در ورود مشکل دارید روی «فراموشی رمز عبور» کلیک کنید تا لینک بازیابی به ایمیلتان ارسال شود."
   },
   {
-    "keywords": ["payment", "card", "checkout"],
-    "response": "We accept all major credit cards, PayPal, and Apple Pay. All transactions are secured with 256-bit SSL encryption."
+    "keywords": [
+      "payment",
+      "card",
+      "checkout",
+      "پرداخت",
+      "کارت"
+    ],
+    "response": "تمام کارت‌های اصلی، پی‌پال و اپل‌پی پذیرفته می‌شود. تراکنش‌ها با رمزگذاری ۲۵۶ بیتی امن هستند."
   },
   {
-    "keywords": ["product", "item", "available"],
-    "response": "You can browse all our products on the main page. Use the search bar or filters to find what you're looking for!"
+    "keywords": [
+      "product",
+      "item",
+      "available",
+      "محصول",
+      "موجودی"
+    ],
+    "response": "برای مشاهده محصولات از صفحه اصلی استفاده کنید و با جستجو یا فیلتر گزینه مورد نظرتان را پیدا کنید."
   },
   {
-    "keywords": ["thank", "thanks"],
-    "response": "You're very welcome! Is there anything else I can help you with today?"
+    "keywords": [
+      "thank",
+      "thanks",
+      "ممنون",
+      "تشکر"
+    ],
+    "response": "خواهش می‌کنم! مورد دیگری هست که بتوانم کمک کنم؟"
+  },
+  {
+    "keywords": [
+      "react",
+      "ری‌اکت",
+      "state",
+      "props",
+      "کامپوننت"
+    ],
+    "response": "در ری‌اکت برای اشتراک داده بین کامپوننت‌ها از props استفاده کنید و برای مدیریت داده داخلی هر کامپوننت از state. تا حد امکان state را نزدیک به جایی که استفاده می‌شود نگه دارید و از تکرار state در سطوح مختلف درخت کامپوننت پرهیز کنید."
+  },
+  {
+    "keywords": [
+      "hook",
+      "useEffect",
+      "dependency",
+      "هوک",
+      "دیپندنسی"
+    ],
+    "response": "هوک useEffect زمانی اجرا می‌شود که یکی از وابستگی‌هایش در آرایه dependency تغییر کند. همیشه وابستگی‌های واقعی را در آرایه قرار دهید تا از باگ‌های مسابقه‌ای و داده قدیمی جلوگیری شود؛ اگر وابستگی ثابت ندارید، از useMemo یا useCallback برای ثابت نگه داشتن توابع و مقادیر استفاده کنید."
+  },
+  {
+    "keywords": [
+      "performance",
+      "بهینه‌سازی",
+      "lazy",
+      "code splitting",
+      "سوسپنس"
+    ],
+    "response": "برای بهبود عملکرد فرانت‌اند، کامپوننت‌های سنگین را با React.lazy و Suspense به صورت تنبل بارگذاری کنید تا باندل اولیه کوچک بماند. همچنین از memo برای جلوگیری از رندرهای غیرضروری و از استفاده بی‌مورد از context در شاخه‌های بزرگ اجتناب کنید."
+  },
+  {
+    "keywords": [
+      "form",
+      "فرم",
+      "controlled",
+      "validation",
+      "react hook form"
+    ],
+    "response": "در فرم‌های کنترل‌شده، مقدار ورودی‌ها را به state متصل کنید تا همگام‌سازی داده و UI آسان شود. برای مدیریت فرم‌های بزرگ و بهینه از کتابخانه‌هایی مثل React Hook Form استفاده کنید که از ثبت‌کننده‌ها (register) و اعتبارسنجی سمت کلاینت پشتیبانی می‌کند."
+  },
+  {
+    "keywords": [
+      "accessibility",
+      "a11y",
+      "دسترس‌پذیری",
+      "aria",
+      "semantic"
+    ],
+    "response": "دسترس‌پذیری را در اولویت قرار دهید: از تگ‌های معنایی مثل header، main و button استفاده کنید، متن جایگزین برای تصاویر بگذارید و ویژگی‌های ARIA را فقط زمانی به‌کار ببرید که نقش عنصر به‌صورت پیش‌فرض مشخص نباشد. فوکوس قابل مشاهده و ترتیب تب منطقی را حفظ کنید."
   }
 ]
-

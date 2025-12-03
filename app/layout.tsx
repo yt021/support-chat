@@ -3,8 +3,8 @@ import './globals.css'
 import { ChatProvider } from '@/contexts/ChatContext'
 
 export const metadata: Metadata = {
-  title: 'Support Chatbot',
-  description: 'AI-powered support chatbot built with Next.js and React',
+  title: 'چت پشتیبانی',
+  description: 'دستیار پشتیبانی فارسی با Next.js و React',
 }
 
 export default function RootLayout({

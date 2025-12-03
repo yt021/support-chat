@@ -57,7 +57,7 @@ export function useChatBot(): UseChatBotReturn {
       const errorMessage = {
         id: (Date.now() + 1).toString(),
         role: 'assistant' as const,
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: 'متأسفم، خطایی رخ داد. لطفاً دوباره تلاش کنید.',
         timestamp: new Date(),
       }
       addMessage(errorMessage)

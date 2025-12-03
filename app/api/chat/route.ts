@@ -18,7 +18,7 @@ function generateResponse(message: string): string {
   }
 
   // Default response if no match found
-  return 'Thanks for your message! I understand you\'re asking about: "' + message + '". Could you provide a bit more detail, or try asking about shipping, returns, account, contact, or orders?'
+  return 'ممنون از پیام شما! متوجه شدم می‌پرسید: «' + message + '». لطفاً کمی بیشتر توضیح بدهید یا درباره ارسال، مرجوعی، حساب، پشتیبانی یا سفارش سؤال کنید.'
 }
 
 export async function POST(request: NextRequest) {

@@ -34,7 +34,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
       </div>
 
       {/* Message Bubble */}
-      <div className={`flex flex-col ${isUser ? 'items-end' : 'items-start'}`}>
+      <div className={`flex flex-col flex-1 min-w-0 ${isUser ? 'items-end' : 'items-start'}`}>
         <div
           dir="rtl"
           className={`chat-bubble ${
